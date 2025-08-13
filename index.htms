@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+    <title>A Última Estrela</title>
+      <style>
+          body {
+                  font-family: 'Segoe UI', sans-serif;
+                        background: linear-gradient(to bottom, #000011, #1a0033);
+                              color: #ffffff;
+                                    padding: 30px;
+                                          max-width: 600px;
+                                                margin: auto;
+          }
+              h1 {
+                      color: #ffccff;
+              }
+                  .story {
+                          margin-bottom: 20px;
+                  }
+                      .choices button {
+                              margin: 5px 0;
+                                    padding: 10px;
+                                          width: 100%;
+                                                background-color: #330066;
+                                                      color: white;
+                                                            border: none;
+                                                                  border-radius: 8px;
+                                                                        cursor: pointer;
+                                                                              font-size: 16px;
+                                                                                    transition: 0.2s;
+                      }
+                          .choices button:hover {
+                                  background-color: #6600cc;
+                          }
+                            </style>
+                            </head>
+                            <body>
+
+                              <h1>A Última Estrela</h1>
+                                <div class="story" id="storyText">
+                                    Você é Luma, uma engenheira espacial. Um estranho sinal vem da última estrela da galáxia. O que você faz?
+                                      </div>
+
+                                        <div class="choices" id="choices">
+                                            <button onclick="escolha1()">📡 Tentar decodificar o sinal</button>
+                                                <button onclick="fimEscuridão()">🚫 Ignorar o sinal</button>
+                                                  </div>
+
+                                                    <script>
+                                                        function escolha1() {
+                                                                  document.getElementById('storyText').innerText = 
+                                                                          "Você decifra o sinal: 'Tempo...'. Há uma contagem regressiva. Você segue as coordenadas?";
+                                                                                document.getElementById('choices').innerHTML = `
+                                                                                        <button onclick="escolha2()">🛰️ Seguir as coordenadas</button>
+                                                                                                <button onclick="fimEscuridão()">🔙 Voltar e ignorar</button>
+                                                                                                      `;
+                                                        }
+
+                                                            function escolha2() {
+                                                                      document.getElementById('storyText').innerText = 
+                                                                              "Você encontra uma estação antiga com uma IA hostil chamada Vórtix. O que faz?";
+                                                                                    document.getElementById('choices').innerHTML = `
+                                                                                            <button onclick="conversar()">🤖 Conversar com Vórtix</button>
+                                                                                                    <button onclick="fimGameOver()">⚔️ Atacar Vórtix</button>
+                                                                                                          `;
+                                                            }
+
+                                                                function conversar() {
+                                                                          document.getElementById('storyText').innerText = 
+                                                                                  "Vórtix revela que sua civilização criou as estrelas. Ele oferece um dilema: restaurar a luz ou deixar tudo apagar.";
+                                                                                        document.getElementById('choices').innerHTML = `
+                                                                                                <button onclick="fimLuz()">✨ Restaurar a luz</button>
+                                                                                                        <button onclick="fimEscuridão()">🌑 Deixar tudo escuro</button>
+                                                                                                              `;
+                                                                }
+
+                                                                    function fimLuz() {
+                                                                              document.getElementById('storyText').innerText = 
+                                                                                      "Você escolheu restaurar a luz. A galáxia brilha novamente. Luma será lembrada como a guardiã da última estrela.";
+                                                                                            document.getElementById('choices').innerHTML = `<button onclick="reiniciar()">🔁 Jogar de novo</button>`;
+                                                                    }
+
+                                                                        function fimEscuridão() {
+                                                                                  document.getElementById('storyText').innerText = 
+                                                                                          "Você ignorou o sinal... A última estrela se apaga, e a escuridão domina o universo. Fim.";
+                                                                                                document.getElementById('choices').innerHTML = `<button onclick="reiniciar()">🔁 Jogar de novo</button>`;
+                                                                        }
+
+                                                                            function fimGameOver() {
+                                                                                      document.getElementById('storyText').innerText = 
+                                                                                              "Você atacou Vórtix, mas ele apagou tudo em resposta. O universo mergulha na escuridão eterna. Fim.";
+                                                                                                    document.getElementById('choices').innerHTML = `<button onclick="reiniciar()">🔁 Jogar de novo</button>`;
+                                                                            }
+
+                                                                                function reiniciar() {
+                                                                                          location.reload();
+                                                                                }
+                                                                                  </script>
+
+                                                                                  </body>
+                                                                                  </html><!DOCTYPE html>
+                                                                                  <html lang="pt-BR">
+                                                                                  <head>
+                                                                                    <meta charset="UTF-8">
+                                                                                      <title>A Última Estrela</title>
+                                                                                        <style>
+                                                                                            body {
+                                                                                                      font-family: 'Segoe UI', sans-serif;
+                                                                                                            background: linear-gradient(to bottom, #000011, #1a0033);
+                                                                                                                  color: #ffffff;
+                                                                                                                        padding: 30px;
+                                                                                                                              max-width: 600px;
+                                                                                                                                    margin: auto;
+                                                                                            }
+                                                                                                h1 {
+                                                                                                          color: #ffccff;
+                                                                                                }
+                                                                                                    .story {
+                                                                                                              margin-bottom: 20px;
+                                                                                                    }
+                                                                                                        .choices button {
+                                                                                                                  margin: 5px 0;
+                                                                                                                        padding: 10px;
+                                                                                                                              width: 100%;
+                                                                                                                                    background-color: #330066;
+                                                                                                                                          color: white;
+                                                                                                                                                border: none;
+                                                                                                                                                      border-radius: 8px;
+                                                                                                                                                            cursor: pointer;
+                                                                                                                                                                  font-size: 16px;
+                                                                                                                                                                        transition: 0.2s;
+                                                                                                        }
+                                                                                                            .choices button:hover {
+                                                                                                                      background-color: #6600cc;
+                                                                                                            }
+                                                                                                              </style>
+                                                                                                              </head>
+                                                                                                              <body>
+
+                                                                                                                <h1>A Última Estrela</h1>
+                                                                                                                  <div class="story" id="storyText">
+                                                                                                                      Você é Luma, uma engenheira espacial. Um estranho sinal vem da última estrela da galáxia. O que você faz?
+                                                                                                                        </div>
+
+                                                                                                                          <div class="choices" id="choices">
+                                                                                                                              <button onclick="escolha1()">📡 Tentar decodificar o sinal</button>
+                                                                                                                                  <button onclick="fimEscuridão()">🚫 Ignorar o sinal</button>
+                                                                                                                                    </div>
+
+                                                                                                                                      <script>
+                                                                                                                                          function escolha1() {
+                                                                                                                                                  document.getElementById('storyText').innerText = 
+                                                                                                                                                          "Você decifra o sinal: 'Tempo...'. Há uma contagem regressiva. Você segue as coordenadas?";
+                                                                                                                                                                document.getElementById('choices').innerHTML = `
+                                                                                                                                                                        <button onclick="escolha2()">🛰️ Seguir as coordenadas</button>
+                                                                                                                                                                                <button onclick="fimEscuridão()">🔙 Voltar e ignorar</button>
+                                                                                                                                                                                      `;
+                                                                                                                                          }
+
+                                                                                                                                              function escolha2() {
+                                                                                                                                                      document.getElementById('storyText').innerText = 
+                                                                                                                                                              "Você encontra uma estação antiga com uma IA hostil chamada Vórtix. O que faz?";
+                                                                                                                                                                    document.getElementById('choices').innerHTML = `
+                                                                                                                                                                            <button onclick="conversar()">🤖 Conversar com Vórtix</button>
+                                                                                                                                                                                    <button onclick="fimGameOver()">⚔️ Atacar Vórtix</button>
+                                                                                                                                                                                          `;
+                                                                                                                                              }
+
+                                                                                                                                                  function conversar() {
+                                                                                                                                                          document.getElementById('storyText').innerText = 
+                                                                                                                                                                  "Vórtix revela que sua civilização criou as estrelas. Ele oferece um dilema: restaurar a luz ou deixar tudo apagar.";
+                                                                                                                                                                        document.getElementById('choices').innerHTML = `
+                                                                                                                                                                                <button onclick="fimLuz()">✨ Restaurar a luz</button>
+                                                                                                                                                                                        <button onclick="fimEscuridão()">🌑 Deixar tudo escuro</button>
+                                                                                                                                                                                              `;
+                                                                                                                                                  }
+
+                                                                                                                                                      function fimLuz() {
+                                                                                                                                                              document.getElementById('storyText').innerText = 
+                                                                                                                                                                      "Você escolheu restaurar a luz. A galáxia brilha novamente. Luma será lembrada como a guardiã da última estrela.";
+                                                                                                                                                                            document.getElementById('choices').innerHTML = `<button onclick="reiniciar()">🔁 Jogar de novo</button>`;
+                                                                                                                                                      }
+
+                                                                                                                                                          function fimEscuridão() {
+                                                                                                                                                                  document.getElementById('storyText').innerText = 
+                                                                                                                                                                          "Você ignorou o sinal... A última estrela se apaga, e a escuridão domina o universo. Fim.";
+                                                                                                                                                                                document.getElementById('choices').innerHTML = `<button onclick="reiniciar()">🔁 Jogar de novo</button>`;
+                                                                                                                                                          }
+
+                                                                                                                                                              function fimGameOver() {
+                                                                                                                                                                      document.getElementById('storyText').innerText = 
+                                                                                                                                                                              "Você atacou Vórtix, mas ele apagou tudo em resposta. O universo mergulha na escuridão eterna. Fim.";
+                                                                                                                                                                                    document.getElementById('choices').innerHTML = `<button onclick="reiniciar()">🔁 Jogar de novo</button>`;
+                                                                                                                                                              }
+
+                                                                                                                                                                  function reiniciar() {
+                                                                                                                                                                          location.reload();
+                                                                                                                                                                  }
+                                                                                                                                                                    </script>
+
+                                                                                                                                                                    </body>
+                                                                                                                                                                    </html>
+                                                                                                                                                                  }
+                                                                                                                                                              }
+                                                                                                                                                          }
+                                                                                                                                                      }
+                                                                                                                                                  }
+                                                                                                                                              }
+                                                                                                                                          }
+                                                                                                            }
+                                                                                                        }
+                                                                                                    }
+                                                                                                }
+                                                                                            }
+                                                                                }
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                          }
+                      }
+                  }
+              }
+          }
